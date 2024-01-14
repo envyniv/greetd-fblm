@@ -11,7 +11,7 @@ This fork hopes to expand the tool giving it more functionality, while keeping i
 
 * Setup
 My greetd config looks like:
-```
+#+BEGIN_SRC
 [terminal]
 # The VT to run the greeter on. Can be "next", "current" or a number
 # designating the VT.
@@ -26,7 +26,7 @@ command = "fblm"
 # on the greeter. A graphical greeter may for example require the user to be
 # in the `video` group.
 user = "greetd"
-```
+#+END_SRC
 * Demo
 [[./assets/demo.gif]]
 
