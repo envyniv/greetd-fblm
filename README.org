@@ -1,0 +1,48 @@
+#+title: Greetd Framebuffer login manager
+#+subtitle: formerly Deathowl's dummy login manager
+
+A minimal graphical login manager.
+Uses framebuffer, so You wont have to run a wayland session to bootstrap your wayland session
+This is a greetd frontend.
+
+* Prior work
+Continuation/fork of prior work by [[https://github.com/deathowl/ddlm][Deathowl]] and [[https://git.sr.ht/~kennylevinsen/dlm][kenylevinsen]].
+This fork hopes to expand the tool giving it more functionality, while keeping it minimalistic.
+
+* Setup
+My greetd config looks like:
+```
+[terminal]
+# The VT to run the greeter on. Can be "next", "current" or a number
+# designating the VT.
+vt = "current"
+
+# The default session, also known as the greeter.
+[default_session]
+
+command = "fblm"
+
+# The user to run the command as. The privileges this user must have depends
+# on the greeter. A graphical greeter may for example require the user to be
+# in the `video` group.
+user = "greetd"
+```
+* Demo
+[[./assets/demo.gif]]
+
+* Future plans
+** DONE Enable selection of WM on the login screen
+#+DELEGATED_TO: deathowl
+*** TODO Disable wm/de selection with ~nowm~ argument
+#+DELEGATED_TO: envy
+If you wish to disable WM/DE selection, you can just use the ~--nowm~ argument.
+This is useful when your setup is configured to start your chosen WM/DE as a service
+** TODO Enable configurable backgrounds for the greeter
+#+DELEGATED_TO: envy
+*** TODO BMP
+#+DELEGATED_TO: envy
+Chosen format for the time being. Possibly consider more formats.
+** TODO Enable font selection
+#+DELEGATED_TO: envy
+** TODO Display error message in a box
+#+DELEGATED_TO: envy
